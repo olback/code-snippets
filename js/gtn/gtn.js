@@ -8,6 +8,7 @@ const input = document.getElementById("input");
 const check = document.getElementById("check");
 const output = document.getElementById("output");
 const restart = document.getElementById("restart");
+const devConsole = document.getElementById("open-console");
 const cheat = false;
 var rNumber = Math.floor(Math.random() * 100);
 var round = 0;
@@ -26,7 +27,7 @@ function compare() {
         if (tries.length == 1) {
             output.innerHTML = "You're Lucky. You got it on the first try!";
         } else {
-            output.innerHTML = "Correct! You got it in " + tries.length + " tries and the number was " + rNumber + "!";
+            output.innerHTML = "Correct! You got it in " + tries.length + " tries!";
         }
                     
         input.disabled = true;
@@ -40,11 +41,12 @@ function compare() {
     } else if (input.value > rNumber) {
 
         output.innerHTML = "Number you enterd is too big";
+        input.value = "";
 
     } else if (input.value < rNumber) {
 
         output.innerHTML = "Number you enterd is too small";
-
+        input.value = "";
     }
 
 }
