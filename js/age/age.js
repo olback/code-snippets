@@ -3,14 +3,15 @@
  */
 
 // Vars
-const year = 2000;                        // The year you were born.
-const bMonth = 9;                         // The month you were born.
-const day = 31;                           // The day you were born.
+const year = 2000;                       // The year you were born.
+const bMonth = 9;                        // The month you were born.
+const day = 10;                          // The day you were born.
 const date = new Date();                 // Store new Date ()
 const cYear = date.getFullYear();        // Get current year
 const cMonth = date.getMonth();          // Get current month
 const cDay = date.getDate();             // Get current day of the month
-const month = bMonth - 1;                  // JS starts counting from 0. January = 0, December = 11.
+const month = bMonth - 1;                // JS starts counting from 0. January = 0, December = 11.
+let age;
 
 // Example 1
 // This example is 100% accurate, but it's quite complex compared to example 2.
