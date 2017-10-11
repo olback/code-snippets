@@ -1,3 +1,9 @@
+--
+--	Client script for CC login system
+--	github.com/olback
+--
+
+
 local modemSide = "top" -- Wireless/Wired modem
 local serverID = 1 -- Key Server ID
 
