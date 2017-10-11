@@ -218,7 +218,7 @@ if term.isColor() then
   term.setTextColor(colors.yellow)
 end
 
-print("-- olbOS --")
+print("-- olbOS v1.0 --")
 term.setTextColor(colors.white)
 print("Password: ")
 
