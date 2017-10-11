@@ -191,7 +191,7 @@ local function sha256(msg)
 		num2s(H[5], 4) .. num2s(H[6], 4) .. num2s(H[7], 4) .. num2s(H[8], 4))
 end
 
--- End haser algo
+-- End hasher algo
 
 term.clear()
 term.setCursorPos(1,1)
