@@ -1,3 +1,8 @@
+--
+--  Server script for CC login system
+--  github.com/olbacl
+--
+
 local modemSide = "top" -- Wireless/Wired modem
 local hashFile = "password_hash.sha256" -- Don't change unless you know what you're doing!
 
