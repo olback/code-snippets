@@ -1,19 +1,29 @@
 local modemSide = "top" -- Wireless/Wired modem
-local password = "kek" -- Make it secure! This will be hashed and moved to a sperate file in the future.
+local hashFile = "password_hash.sha256" -- Don't change unless you know what you're doing!
+
+file = fs.open(hashFile, "r")
+hash = file.readAll()
+file.close()
 
 os.pullEvent = os.pullEventRaw
 
 term.clear()
 term.setCursorPos(1,1)
+
+if term.isColor() then
+  term.setTextColor(colors.yellow)
+end
+
 print("-- olbOS Server v1.0 --")
+term.setTextColor(colors.white)
 print("Server ID: ", os.getComputerID())
 rednet.open(modemSide)
 
 while true do
   id, msg, dist = rednet.receive()
   
-  if msg == "getPass" then
-    rednet.send(id, password)
+  if msg == "getHash" then
+    rednet.send(id, hash)
     print("Sent to #", id)
   end
   
