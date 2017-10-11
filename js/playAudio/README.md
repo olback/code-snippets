@@ -18,6 +18,6 @@ stopAudio(_string/int_ id);
 Example: `stopAudio("audio1");`
 
 An ID can be either a string or a integer.  
-Volume is enterd in percent with out the '%'.  
+Volume is enterd in percent without the '%'.  
 HTML5 supports most audio formats you can think of. Such as mp3, wav and ogg.  
 For a complete reference, see [this article on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats).
