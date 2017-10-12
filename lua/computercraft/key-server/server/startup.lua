@@ -1,6 +1,6 @@
 --
 --  Server script for CC login system
---  github.com/olbacl
+--  github.com/olback
 --
 
 local modemSide = "top" -- Wireless/Wired modem
