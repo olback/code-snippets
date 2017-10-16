@@ -31,7 +31,6 @@ end
 ----- Download -----
 function download()
   
-  
   local data = "?download=" .. args[2]
   local response = http.get(link..data)
   local file = tostring(args[3])
@@ -66,7 +65,7 @@ elseif args[1] == "get" then
     if args[3] ~= nil then
       download()
     else
-      error("Please specift a target file.")
+      error("Please specify a target file.")
     end
   else
     error("Please specify a file to download.")
