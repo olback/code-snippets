@@ -14,10 +14,11 @@ To host this your self you will need:
 
 ## How to set it up?
 1. Create an MySQL account so that PHP can connect to it.
-2. Rename server.php to something that makes sense.
-3. Change the credentials in server.php.
-4. Change the settings in bucket.lua to match the ones in server.php
-5. Save and you're done.
+2. Import db.sql
+3. Rename server.php to something that makes sense.
+4. Change the credentials in server.php.
+5. Change the settings in bucket.lua to match the ones in server.php
+6. Save and you're done.
 
 ## How to use it?
 It's more or less the same as the pastebin command.
