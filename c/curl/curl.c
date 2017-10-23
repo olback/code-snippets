@@ -1,7 +1,3 @@
-/*
- *	Compile with 'gcc curl.c -lcurl'
- */
-
 #include <curl/curl.h>
 #include <string.h>
 
