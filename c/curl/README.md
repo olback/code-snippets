@@ -1,0 +1,1 @@
+# Store output from curl in a variable
