@@ -1,4 +1,3 @@
-
 const w = window.innerWidth; // Canvas width.
 const h = window.innerHeight; // Canvas height.
 
@@ -8,10 +7,19 @@ let y;
 
 function setup() {
   createCanvas(w, h);
+  drawCurve();
+  fill(255);
+  noStroke();
+  textSize(18);
+  textAlign(CENTER);
+  text('Press the mouse to generate a new curve!', w / 2, 22);
 }
 
-function draw() {
+function mousePressed() {
+  drawCurve();
+}
 
+function drawCurve() {
   background(51); // Background grayscale 51.
   noFill(); // No fill.
   strokeWeight(3); // Stroke weight 3.
@@ -27,7 +35,4 @@ function draw() {
   }
 
   endShape();
-
-  noLoop(); // Don't loop.
-
 }
