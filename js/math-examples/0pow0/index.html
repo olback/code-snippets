@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>0 to the power of 0</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+            }
+            
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+                width: 250px;
+            }
+            
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>An example showing why 0<sup>0</sup> = 1</h1>
+        <table id="table">
+            <tr>
+                <th>expression</th>
+                <th>value</th>
+            </tr>
+        </table>
+        <script>
+            /* Floationg point numbers in JavaScript, please go away... */
+            const table = document.getElementById('table');
+            let i = 1;
+            while(i >= 0.00000000001) {
+
+                let row = table.insertRow(table.rows.length);
+                let expression = row.insertCell(0);
+                let value = row.insertCell(1);
+
+                expression.innerHTML = i.toFixed(10) + '<sup>' + i.toFixed(10) + '</sup>';
+                value.innerHTML = Math.pow(i.toFixed(10), i.toFixed(10));
+
+                i = i / 10;
+            }
+        </script>
+    </body>
+</html>

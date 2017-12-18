@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>0 factorial</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+            }
+            
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+                width: 250px;
+            }
+            
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Factorial</h1>
+        <table id="table">
+            <tr>
+                <th>expression</th>
+                <th>value</th>
+            </tr>
+        </table>
+
+        <script>
+            let f = [];
+            function factorial (n) {
+              if (n == 0 || n == 1)
+                return 1;
+              if (f[n] > 0)
+                return f[n];
+              return f[n] = factorial(n-1) * n;
+            }
+
+            for(let i = 7; factorial(i) >= 0; i--) {
+                let row = table.insertRow(table.rows.length);
+                let expression = row.insertCell(0);
+                let value = row.insertCell(1);
+                expression.innerHTML = i + '!';
+                value.innerHTML = factorial(i);
+                if(i == 0) {
+                    break;
+                }
+            }
+        </script>
+    </body>
+</html>
