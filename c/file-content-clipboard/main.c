@@ -19,7 +19,10 @@ int main(int argc, char *argv[])
 
     /* Construct file path */
     char path[MAX_PATH];
-    sprintf(path, "C:\\Users\\%s\\AppData\\Roaming\\%s", username, filename);
+    if(argv[1])
+        sprintf(path, "%s", argv[1]);
+    else
+        sprintf(path, "C:\\Users\\%s\\AppData\\Roaming\\%s", username, filename);
 
     /* Read data from file */
     FILE *fp = fopen(path, "rb");
