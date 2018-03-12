@@ -1,6 +1,6 @@
 /*
  *	Get the median of any amount of numbers
- * 	github.com/olback/code-snippets/median/
+ * 	https://github.com/olback/code-snippets/tree/master/js/median
  * 	olback © 2018
  */
 
