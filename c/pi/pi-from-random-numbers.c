@@ -27,9 +27,9 @@ char *formatTime(float seconds) {
 
     if(hour >= 1) {
         min = min - ((int)hour * 60);
-        sprintf(str, "%.0f hours, %.0f minutes and %.2f seconds", hour, min, sec);
+        sprintf(str, "%.0f hours, %.0f minutes and %.0f seconds", hour, min, sec);
     } else if(min >= 1) {
-        sprintf(str, "%.0f minutes and %.2f seconds", min, sec);
+        sprintf(str, "%.0f minutes and %.0f seconds", min, sec);
     } else {
         sprintf(str, "%.5f seconds", seconds);
     }
