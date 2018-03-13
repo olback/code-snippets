@@ -7,14 +7,14 @@
 let negative = false;
 let result = 0;
 
-for(let i = 0; i < 100000000; i++) {
+for(let i = 1; i < 100000000; i+= 2) {
 
     if(negative) {
         // console.log(-1 / (i * 2 +1));
-        result += (-1 / (i * 2 +1));
+        result += (-1 / i);
     } else {
         // console.log(1 / (i * 2 +1));
-        result += (1 / (i * 2 +1));
+        result += (1 / i);
     }
 
     negative = !negative;

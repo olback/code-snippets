@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
     }
     
     /* Print how many times we genereate 2 new numbers */
-    printf("Running %lli times. ", rounds);
+    printf("Running %li times. ", rounds);
 
     /* If rounds >= 10000000, print a warning */
     if (rounds >= 10000000)
