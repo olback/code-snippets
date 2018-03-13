@@ -7,7 +7,7 @@
 let negative = false;
 let result = 0;
 
-for(let i = 1; i < 100000000; i+= 2) {
+for(let i = 1; i < 10000000; i+= 2) {
 
     if(negative) {
         // console.log(-1 / (i * 2 +1));
