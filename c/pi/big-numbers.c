@@ -1,7 +1,4 @@
 /*
- *  Compile with 'gcc pi-from-random-numbers.c -m64 -lm'
- * 
- *  Video by Matt Parker https://www.youtube.com/watch?v=RZBhSi_PwHU
  *  https://github.com/olback/code-snippets/tree/master/c/pi
  *  2018 © olback
  */
@@ -18,24 +15,29 @@ typedef int bool;
 u_int64_t rounds = 10000000;
 u_int64_t coprimeCount;
 
-char *formatTime(float seconds) {
-    char *str = (char *) malloc(sizeof(char) * 128);
+char *formatTime(float seconds)
+{
+    char *str = (char *)malloc(sizeof(char) * 128);
 
     float hour = seconds / (60 * 60);
     float min = seconds / 60;
     float sec = (int)seconds % 60;
 
-    if(hour >= 1) {
+    if (hour >= 1)
+    {
         min = min - ((int)hour * 60);
         sprintf(str, "%.0f hours, %.0f minutes and %.0f seconds", hour, min, sec);
-    } else if(min >= 1) {
+    }
+    else if (min >= 1)
+    {
         sprintf(str, "%.0f minutes and %.0f seconds", min, sec);
-    } else {
+    }
+    else
+    {
         sprintf(str, "%.5f seconds", seconds);
     }
 
     return str;
-
 }
 
 int gcd(u_int64_t a, u_int64_t b)
@@ -70,16 +72,6 @@ int main(int argc, char *argv[])
             exit(-1);
         }
     }
-    
-    /* Print how many times we genereate 2 new numbers */
-    printf("Running %li times. ", rounds);
-
-    /* If rounds >= 10000000, print a warning */
-    if (rounds >= 10000000)
-        printf("This might take a while...");
-
-    /* Print a newline since we don't do that in the printf statements above */
-    printf("\n");
 
     /* Generate a random seed from the time */
     srand(time(NULL));
