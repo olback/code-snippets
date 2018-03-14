@@ -11,3 +11,7 @@ Generating π from big numbers (0-RAND_MAX):
 Generating π with a series (4/1 + 4/-3 + 4/5 + 4/-7 ...):  
 `make series && ./series.out`  
 [Video](https://www.youtube.com/watch?v=HrRMnzANHHs) [Rate of convergence (Wikipedia)](https://en.wikipedia.org/wiki/Pi#Rate_of_convergence)
+
+Generating π with the Chudnovsky algorithm:  
+`make chudnovsky && ./chudnovsky.out`  
+[Video](https://www.youtube.com/watch?v=LhlqCJjbEa0&t=0s) [Chudnovsky algorithm (Wikipedia)](https://en.wikipedia.org/wiki/Chudnovsky_algorithm)

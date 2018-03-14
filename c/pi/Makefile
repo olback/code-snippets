@@ -6,6 +6,7 @@ all:
 	make big
 	make small
 	make series
+	make chudnovsky
 	echo 'Files: '
 	ls -a | grep '.out'
 
@@ -17,3 +18,6 @@ small:
 
 series: 
 	gcc series.c -m64 -lm -o series.out
+
+chudnovsky:
+	gcc chudnovsky.c -m64 -lm -o chudnovsky.out
