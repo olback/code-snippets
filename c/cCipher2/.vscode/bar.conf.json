@@ -1,0 +1,6 @@
+{
+    "commands": {
+        "build": "g++ cCipher2.cpp -o cCipher2.out -std=c++17 -Wall",
+        "run": "./cCipher2.out"
+    }
+}
