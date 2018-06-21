@@ -71,7 +71,6 @@ void decrypt(char *str, int len)
     sprintf(output, "%s", str);
     for (int i = 0; i < strlen(output); i++)
     {
-
         /* make sure all characters are uppercase */
         if (output[i] > 96)
         {
