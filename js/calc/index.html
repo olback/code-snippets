@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Shitulator</title>
+        <style>
+        
+            html {
+                background-color: #ddd;
+            }
+
+            button {
+                text-align: center;
+                padding: 1em;
+                width: 50px;
+                height: 50px;
+                margin: 0.3em;
+                font-size: 1em;
+            }
+
+            input {
+                margin: 0.3em;
+                font-size: 1em;
+                width: 157px;
+                padding: 0.5em;
+                text-align: right;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <input type="text" readonly="readonly" id="view" />
+        <button>=</button><br/>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>/</button><br/>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>*</button><br/>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>-</button><br/>
+        <button>0</button>
+        <button>.</button>
+        <button>%</button>
+        <button>+</button><br/>
+
+        <script>
+        
+            const input = document.getElementById('view');
+            const buttons = document.getElementsByTagName('button');
+
+            for(let b of buttons) {
+                b.addEventListener('click', e => {
+
+                    if(e.path[0].innerText === '=') {
+                        alert(eval(input.value));
+                        return;
+                    }
+
+                    console.log(e.path[0].innerText);
+                    input.value += e.path[0].innerText;
+                })
+            }
+        
+            
+        </script>
+
+    </body>
+</html>
