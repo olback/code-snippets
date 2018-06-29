@@ -7,8 +7,8 @@
 #include <string.h>
 #include <stdlib.h>
 
-const char al[] = "abcdefghijklmnopqrstuvwxyz\0";
-const char au[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ\0";
+const char al[] = "abcdefghijklmnopqrstuvwxyz";
+const char au[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 char *to_arr(const char c)
 {
@@ -68,8 +68,8 @@ void decode(char *str, int shift)
         alb[i] = al[strlen(al) - i - 1];
         aub[i] = au[strlen(au) - i - 1];
     }
-    alb[strlen(alb)] = '\0';
-    aub[strlen(aub)] = '\0';
+    alb[strlen(al)] = '\0';
+    aub[strlen(au)] = '\0';
 
     for (int i = 0; i < strlen(str); i++)
     {
