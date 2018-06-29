@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "sstream": "c",
+        "constants.h": "c",
+        "utility.h": "c"
+    }
+}
