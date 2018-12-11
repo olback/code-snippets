@@ -1,5 +1,5 @@
 /*
- *	Calculate PI with with a series
+ *	Calculate PI with a series
  * 	https://github.com/olback/code-snippets/tree/master/js/pi
  * 	olback © 2018
  */
