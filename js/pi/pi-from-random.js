@@ -1,6 +1,6 @@
 /*
- *	Calculate PI with with a series
- * 	https://github.com/olback/code-snippets/tree/master/js/pi
+ *	Calculate PI with random numbers
+ *	https://github.com/olback/code-snippets/tree/master/js/pi
  * 	olback © 2018
  */
 
